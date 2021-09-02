@@ -435,3 +435,4 @@ FodyWeavers.xsd
 TreePractice.sln
 /PriorityQueue/PriorityQueue.vcxproj.filters
 /PriorityQueue/PriorityQueue.vcxproj
+*.sln
