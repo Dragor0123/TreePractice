@@ -26,9 +26,9 @@ int main()
 
 	/*
 							10
-					20		           30
-				44	   60		   95      100
-			 70   83					 22   111
+					20		         30
+				44	   60		 95       100
+			 70   83					22   111
 												27
 	*/
 
@@ -44,26 +44,36 @@ int main()
 	treePtr node3 = MakeNode(30, node6, node7);
 	treePtr node2 = MakeNode(20, node4, node5);
 	treePtr node1 = MakeNode(10, node2, node3);
-	// treePtr forcopy = MakeNode(0, NULL, NULL);
+	treePtr forcopy = MakeNode(0, NULL, NULL);
 
+	forcopy = Copy_Tree(node1);
 	printf("----------preorder----------\n");
-	//preOrder_iter(node1);
-	//printf("\n");
+	Pre_Order(forcopy);
+	printf("\n");
 	Pre_Order_iter(node1);
 	printf("\n\n");
 
 	printf("----------inorder----------\n");
-	//inOrder_iter(node1);
-	//printf("\n");
-	In_Order(node1);
+	In_Order(forcopy);
+	printf("\n");
+	In_Order_iter(node1);
 	printf("\n\n");
 
 	printf("----------postorder----------\n");
-	//postOrder_iter(node1);
-	//printf("\n");
-	Post_Order(node1);
+	Post_Order(forcopy);
+	printf("\n");
+	Post_Order_iter(node1);
 	printf("\n\n");
 
+	printf("----------levelorder----------\n");
+	Level_Order(node1);
+	printf("\n\n");
+
+	printf("\n");
+	printf("The Max node value of this tree is ... %d\n", Get_Max(node1));
+	printf("The Sum of this tree's node value is ... %d\n", Get_Sum(node1));
+	
 	Dealloc_Tree(node1);
+	Dealloc_Tree(forcopy);
 	return 0;
 }

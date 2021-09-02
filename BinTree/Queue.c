@@ -2,18 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-inline void Init_Queue(QueueType *q_)
+void Init_Queue(QueueType *q_)
 {
 	//memset(&q_->queue, 0x00, sizeof(element) * MAX_QUEUESIZE);
 	q_->head = q_->tail = 0;
 }
 
-inline int Is_QueueEmpty(QueueType *q_)
+int Is_QueueEmpty(QueueType *q_)
 {
 	return (q_->head == q_->tail);
 }
 
-inline int Is_QueueFull(QueueType *q_)
+int Is_QueueFull(QueueType *q_)
 {
 	return (q_->head == (q_->tail + 1) % MAX_QUEUESIZE);
 }
@@ -23,6 +23,7 @@ void Push_Queue(QueueType *q_, element item_)
 	if (!q_)
 	{
 		fprintf(stderr, "ERROR: nullptr exception.");
+		return;
 	}
 
 	if (Is_QueueFull(q_))

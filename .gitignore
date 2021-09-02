@@ -433,3 +433,5 @@ FodyWeavers.xsd
 /BinarySearchTree/BinarySearchTree.vcxproj.filters
 /BinarySearchTree/BinarySearchTree.vcxproj
 TreePractice.sln
+/PriorityQueue/PriorityQueue.vcxproj.filters
+/PriorityQueue/PriorityQueue.vcxproj
