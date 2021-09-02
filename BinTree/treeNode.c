@@ -37,6 +37,9 @@ int Get_Data(treePtr node_)
 	return node_->data;
 }
 
+/*
+* recursive version of inorder traversal
+*/
 void In_Order(treePtr root_)
 {
 	if (root_)
@@ -49,6 +52,9 @@ void In_Order(treePtr root_)
 	}
 }
 
+/*
+* iterative version of inorder traversal
+*/
 void In_Order_iter(treePtr root_)
 {
 	StackType s;
@@ -71,6 +77,9 @@ void In_Order_iter(treePtr root_)
 	}
 }
 
+/*
+* recursive version of preorder traversal
+*/
 void Pre_Order(treePtr root_)
 {
 	if (root_)
@@ -83,6 +92,9 @@ void Pre_Order(treePtr root_)
 	}
 }
 
+/*
+* iterative version of preorder traversal
+*/
 void Pre_Order_iter(treePtr root_)
 {
 	StackType s;
@@ -104,6 +116,9 @@ void Pre_Order_iter(treePtr root_)
 	}
 }
 
+/*
+* recursive version of postorder traversal
+*/
 void Post_Order(treePtr root_)
 {
 	if (root_)
@@ -116,6 +131,9 @@ void Post_Order(treePtr root_)
 	}
 }
 
+/*
+* iterative version of postorder traversal
+*/
 void Post_Order_iter(treePtr root_)
 {
 	StackType s, bs;
