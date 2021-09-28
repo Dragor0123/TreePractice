@@ -66,6 +66,7 @@ int main()
 		}
 	} while (cmd != 'q');
 
+	Dealloc_Tree(root);
 	return 0;
 }
 
